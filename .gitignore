@@ -1,0 +1,16 @@
+# Python cache files
+__pycache__/
+*.pyc
+
+# Virtual environment
+.venv/
+
+# Jupyter temporary files
+.ipynb_checkpoints/
+
+# Raw corpus data
+data/raw/
+
+# Operating system files
+.DS_Store
+Thumbs.db

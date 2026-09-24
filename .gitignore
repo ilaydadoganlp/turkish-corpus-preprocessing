@@ -11,6 +11,10 @@ __pycache__/
 # Raw corpus data
 data/raw/
 
+# Personal project notes
+docs/decision_log.md
+docs/learning_notes.md
+
 # Operating system files
 .DS_Store
 Thumbs.db

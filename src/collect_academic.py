@@ -8,16 +8,21 @@ def download_pdf(url):
     response.raise_for_status()
     return response.content
 
-def extract_page_text(pdf_bytes, page_number):
+def open_pdf(pdf_bytes):
     doc = pymupdf.open(stream=pdf_bytes, filetype="pdf")
+    return doc
+
+def extract_page_text(doc, page_number):
     text = doc[page_number].get_text()
     return text
 
 def main():
     pdf_bytes = download_pdf(PDF_URL)
-    page_text = extract_page_text(pdf_bytes, 19)
+    doc = open_pdf(pdf_bytes)
+    page_text = extract_page_text(doc, 19)
     print(f"PDF boyutu: {len(pdf_bytes)} bytes")
-    print("Test edilen PDF sayısı: 20")
+    print("Test edilen PDF sayfası: 20")
+    print(f"PDF'teki toplam sayfa sayısı: {len(doc)}")
     print(f"Çıkarılan karakter sayısı: {len(page_text)}")
 
     if page_text.strip():

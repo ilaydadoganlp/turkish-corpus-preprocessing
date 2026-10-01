@@ -35,3 +35,10 @@ outputs.
 ## Project Status
 
 🚧 Work in progress
+
+Corpus collection progress:
+
+- Legal: completed
+- News: completed
+- Academic: completed
+- User-generated: planned
